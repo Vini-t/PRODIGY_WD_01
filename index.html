@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Modern Landing Page</title>
   <link rel="stylesheet" href="styles.css" />
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Vanta.js & Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
 <body>
 
-  <!-- Header / Navbar -->
+  <!-- Header -->
   <header id="navbar">
     <nav class="container">
       <div class="logo">ViniTech</div>
@@ -23,12 +28,14 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Vanta Background -->
   <section class="hero" id="home">
-    <div class="container hero-content">
-      <h1 class="fade-in-up">Innovate Your Digital Presence</h1>
-      <p class="fade-in-up">Professional, responsive, and modern web experiences crafted to perfection.</p>
-      <a href="#features" class="cta-button">Explore Features</a>
+    <div id="vanta-bg">
+      <div class="container hero-content">
+        <h1 class="fade-in-up">Innovate Your Digital Presence</h1>
+        <p class="fade-in-up">Professional, responsive, and modern web experiences crafted to perfection.</p>
+        <a href="#features" class="cta-button">Explore Features</a>
+      </div>
     </div>
   </section>
 
@@ -45,7 +52,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="section about">
     <div class="container">
       <h2>About Us</h2>
@@ -53,7 +60,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="section contact">
     <div class="container">
       <h2>Contact</h2>
