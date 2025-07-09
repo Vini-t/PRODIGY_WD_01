@@ -13,7 +13,6 @@ VANTA.WAVES({
   waveSpeed: 0.8,
   zoom: 1.1
 });
-
 // Sticky header effect
 window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
