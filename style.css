@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+header.scrolled {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #e15252;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  height: 2px;
+  background: #e15252;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, #e15252, #ff9f40);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  background: white;
+  color: #e15252;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #333;
+  color: white;
+}
+
+/* Section Styling */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fade animation (CSS-only) */
+.fade-in-up {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
